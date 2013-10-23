@@ -53,9 +53,9 @@ function populateHostTrustDataIntoTable(hostDetails) {
 			    value = hostDetails[item].location != undefined ? hostDetails[item].location : "";
 				//value="";
 				str+='<td class="row5">'+value+'</td>'+
-				'<td align="center" class="row6"><img border="0" src="'+hostDetails[item].biosStatus+'"></td>'+
-				'<td align="center" class="row7"><img border="0" src="'+hostDetails[item].vmmStatus+'"></td>'+
-				'<td align="center" class="row8"><img border="0" src="'+hostDetails[item].overAllStatus+'"></td>';
+				'<td align="center" class="row6"><img border="0" src="images/Trusted.png"></td>'+
+				'<td align="center" class="row7"><img border="0" src="images/Trusted.png"></td>'+
+				'<td align="center" class="row8"><img border="0" src="images/Trusted.png"></td>';
 				/*if (!(hostDetails[item].overAllStatusBoolean)) {
 					str+='<td class="rowHelp"><input type="image" onclick="showFailureReport(\''+hostDetails[item].hostName+'\')" src="images/helpicon.png" alt="Failure Report"></td>';
 				}else {
