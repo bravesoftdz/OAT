@@ -44,7 +44,7 @@ public class ASComponentFactory {
     }
 
     public HostBO getHostBO() {
-        Object premium = load("com.intel.mtwilson.as.business.HostBO");
+        Object premium = load("com.intel.mtwilson.as.premium.PremiumHostBO");
         HostBO bean;
         if( premium != null ) {            
             bean = (HostBO)premium;
@@ -56,7 +56,7 @@ public class ASComponentFactory {
     }
 
     public HostTrustBO getHostTrustBO() {
-        Object premium = load("com.intel.mtwilson.as.business.trust.HostTrustBO");
+        Object premium = load("com.intel.mtwilson.as.premium.PremiumHostTrustBO");
         HostTrustBO bean;
         if( premium != null ) {            
             bean = (HostTrustBO)premium;
@@ -70,7 +70,7 @@ public class ASComponentFactory {
     }
     
      public ReportsBO getReportsBO() {
-        Object premium = load("com.intel.mtwilson.as.business.ReportsBO");
+        Object premium = load("com.intel.mtwilson.as.premium.PremiumReportsBO");
         ReportsBO bean;
         if( premium != null ) {            
             bean = (ReportsBO)premium;
