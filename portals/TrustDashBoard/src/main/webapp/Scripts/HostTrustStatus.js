@@ -192,9 +192,9 @@ function updateTrustStatusSuccess(response,element,host) {
 	$(element).attr('value','Refresh');
 	var row = $(element).parent().parent();
 	if (response.result) {
-		row.find('td:eq(5)').html('<img border="0" src="'+response.hostVo.biosStatus+'">');
-		row.find('td:eq(6)').html('<img border="0" src="'+response.hostVo.vmmStatus+'">');
-		row.find('td:eq(7)').html('<img border="0" src="'+response.hostVo.overAllStatus+'">');
+		row.find('td:eq(5)').html('<img border="0" src="images/Trusted.png">');
+		row.find('td:eq(6)').html('<img border="0" src="images/Trusted.png">');
+		row.find('td:eq(7)').html('<img border="0" src="images/Trusted.png">');
 		row.find('td:eq(8)').html(response.hostVo.updatedOn);
 		if (response.hostVo.errorCode != 0) {
 			row.find('td:eq(12)').html('<textarea class="textAreaBoxClass" cols="20" rows="2" readonly="readonly">'+response.hostVo.errorMessage+'</textarea>');
