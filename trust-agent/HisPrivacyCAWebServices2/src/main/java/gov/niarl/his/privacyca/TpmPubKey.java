@@ -16,9 +16,9 @@
 package gov.niarl.his.privacyca;
 
 import java.io.*;
-import java.security.*;
-import java.security.spec.*;
-import java.security.interfaces.*;
+import java.security.NoSuchAlgorithmException;
+import java.security.spec.InvalidKeySpecException;
+import java.security.interfaces.RSAPublicKey;
 import java.math.*;
 
 /**

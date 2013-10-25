@@ -15,7 +15,7 @@
 
 package gov.niarl.his.privacyca;
 
-import javax.crypto.spec.*;
+import javax.crypto.spec.SecretKeySpec;
 import java.io.*;
 
 /**

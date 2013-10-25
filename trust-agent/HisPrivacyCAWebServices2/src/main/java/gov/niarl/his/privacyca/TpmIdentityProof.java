@@ -15,11 +15,16 @@
 
 package gov.niarl.his.privacyca;
 
-import java.security.*;
-import java.security.spec.*;
-import java.security.interfaces.*;
+import java.security.NoSuchAlgorithmException;
+import java.security.InvalidKeyException;
+import java.security.SignatureException;
+import java.security.MessageDigest;
+import java.security.Signature;
+import java.security.spec.InvalidKeySpecException;
+import java.security.interfaces.RSAPublicKey;
+import javax.security.cert.CertificateException;
+import javax.security.cert.X509Certificate;
 import java.io.*;
-import javax.security.cert.*;
 
 /**
  * See TPM_IDENTITY_PROOF<p>
