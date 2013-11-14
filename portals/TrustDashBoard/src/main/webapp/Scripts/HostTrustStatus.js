@@ -53,9 +53,15 @@ function populateHostTrustDataIntoTable(hostDetails) {
 			    value = hostDetails[item].location != undefined ? hostDetails[item].location : "";
 				//value="";
 				str+='<td class="row5">'+value+'</td>'+
-				'<td align="center" class="row6"><img border="0" src="images/Trusted.png"></td>'+
-				'<td align="center" class="row7"><img border="0" src="images/Trusted.png"></td>'+
-				'<td align="center" class="row8"><img border="0" src="images/Trusted.png"></td>';
+				(hostDetails[item].biosStatus != undefined? 
+					'<td align="center" class="row6"><img border="0" src="'+hostDetails[item].biosStatus+'"></td>': 
+					'<td align="center" celass="row6"><img border="0" src="images/Trusted.png"></td>') +
+				(hostDetails[item].vmmStatus != undefined?
+					'<td align="center" class="row7"><img border="0" src="'+hostDetails[item].vmmStatus+'"></td>':
+					'<td align="center" class="row7"><img border="0" src="images/Trusted.png"></td>') +
+				(hostDetails[item].overAllStatus != undefined?
+					'<td align="center" class="row8"><img border="0" src="'+hostDetails[item].overAllStatus+'"></td>':
+					'<td align="center" class="row8"><img border="0" src="images/Trusted.png"></td>');
 				/*if (!(hostDetails[item].overAllStatusBoolean)) {
 					str+='<td class="rowHelp"><input type="image" onclick="showFailureReport(\''+hostDetails[item].hostName+'\')" src="images/helpicon.png" alt="Failure Report"></td>';
 				}else {
@@ -192,9 +198,18 @@ function updateTrustStatusSuccess(response,element,host) {
 	$(element).attr('value','Refresh');
 	var row = $(element).parent().parent();
 	if (response.result) {
-		row.find('td:eq(5)').html('<img border="0" src="images/Trusted.png">');
-		row.find('td:eq(6)').html('<img border="0" src="images/Trusted.png">');
-		row.find('td:eq(7)').html('<img border="0" src="images/Trusted.png">');
+		if (response.hostVo.biosStatus != undefined)
+			row.find('td:eq(5)').html('<img border="0" src="'+response.hostVo.biosStatus+'">');
+		else
+			row.find('td:eq(5)').html('<img border="0" src="images/Trusted.png">');
+		if (response.hostVo.vmmStatus != undefined)
+			row.find('td:eq(6)').html('<img border="0" src="'+response.hostVo.vmmStatus+'">');
+		else
+			row.find('td:eq(6)').html('<img border="0" src="images/Trusted.png">');
+		if (response.hostVo.overAllStatus != undefined)
+			row.find('td:eq(7)').html('<img border="0" src="'+response.hostVo.overAllStatus+'">');
+		else
+			row.find('td:eq(7)').html('<img border="0" src="images/Trusted.png">');
 		row.find('td:eq(8)').html(response.hostVo.updatedOn);
 		if (response.hostVo.errorCode != 0) {
 			row.find('td:eq(12)').html('<textarea class="textAreaBoxClass" cols="20" rows="2" readonly="readonly">'+response.hostVo.errorMessage+'</textarea>');
