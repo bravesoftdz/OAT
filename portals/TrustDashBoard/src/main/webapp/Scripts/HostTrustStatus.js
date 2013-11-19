@@ -46,16 +46,16 @@ function populateHostTrustDataIntoTable(hostDetails) {
 				var value = hostDetails[item].hypervisorName != "" ? '<img border="0" src="'+hostDetails[item].hypervisorName+'">' : '';
 				str+='<td align="center" class="row4">'+value+'</td>';
 				//TODO : 
-				 // Loaction Policy 
+				 // Location Policy 
 				 //according to email on Fri 9/14/2012 10:21 AM
 				  //Item: 5
-				//To remove the location from main page commnet thr below line and un uncommnet the next line 
+				//To remove the location from main page comment the below line and uncomment the next line 
 			    value = hostDetails[item].location != undefined ? hostDetails[item].location : "";
 				//value="";
 				str+='<td class="row5">'+value+'</td>'+
 				(hostDetails[item].biosStatus != undefined? 
 					'<td align="center" class="row6"><img border="0" src="'+hostDetails[item].biosStatus+'"></td>': 
-					'<td align="center" celass="row6"><img border="0" src="images/Trusted.png"></td>') +
+					'<td align="center" class="row6"><img border="0" src="images/Trusted.png"></td>') +
 				(hostDetails[item].vmmStatus != undefined?
 					'<td align="center" class="row7"><img border="0" src="'+hostDetails[item].vmmStatus+'"></td>':
 					'<td align="center" class="row7"><img border="0" src="images/Trusted.png"></td>') +
