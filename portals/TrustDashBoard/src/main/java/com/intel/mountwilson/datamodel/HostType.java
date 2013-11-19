@@ -23,11 +23,11 @@ package com.intel.mountwilson.datamodel;
 public class HostType {
     
     public static enum hostOS{
-    	VMWARE_OS("vmware","vmware.png", "false"),
+    	VMWARE_OS("vmware","vmware.jpg", "false"),
         UBUNTU("ubuntu","ubuntu.png","true"),
-        SUSE("suse","suse.png","true"),
-        RHEL("rhel","rhel.png","true"),
-        RED_HAT("redhat","rhel.png","true"),
+        SUSE("suse","suse.jpg","true"),
+        RHEL("rhel","rhel.jpg","true"),
+        RED_HAT("redhat","rhel.jpg","true"),
         CITRIX_XENSERVER("xenserver","citrix.png","false");
         
         private String value;
@@ -67,8 +67,8 @@ public class HostType {
     }
     
     public static enum hostVMM{
-    	QEMU("qemu","kvm.png"),
-        KVM("kvm","kvm.png"),
+    	QEMU("qemu","kvm.jpg"),
+        KVM("kvm","kvm.jpg"),
         XEN("xen","xen.png");
        
         
